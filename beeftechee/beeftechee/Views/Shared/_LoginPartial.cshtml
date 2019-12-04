@@ -1,0 +1,54 @@
+﻿
+@using Microsoft.AspNet.Identity
+@using beeftechee.Models
+@using Microsoft.AspNet.Identity.Owin
+
+@{
+    ApplicationUser user = System.Web.HttpContext.Current.GetOwinContext()
+                                                                .GetUserManager<ApplicationUserManager>()
+                                                                .FindById(User.Identity.GetUserId());
+
+}
+
+
+
+
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "d-inline-flex justify-content-center" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div id="imageDiv">
+            @if (String.IsNullOrWhiteSpace(user.ImageUrl))
+            {
+                <a href="/Manage/Index">
+                    <img id="myUserImage" class="rounded-circle" src="~/Content/UserImages/userimage.png" alt="Alternate Text" />
+                </a>
+            }
+            else
+            {
+                <a href="/Manage/Index">
+                    <img id="myUserImage" class="rounded-circle" src="~/Content/UserImages/@user.ImageUrl" alt="Alternate Text" />
+                </a>
+            }
+
+
+            @Html.ActionLink(user.FirstName + " " + user.LastName,
+            "Index", "Manage", routeValues: null, htmlAttributes: new { id = "usernameLink", title = "Manage", @class = "nav-link", @style = "color: inherit; font-weight: 900;" })
+        </div>
+
+        <div class="menu_btn"><a class="btn_1" id="logoffLink" href="javascript:document.getElementById('logoutForm').submit()">Logout</a></div>
+
+    }
+}
+else
+{
+
+    @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "nav-link", @style = "color: inherit" })
+    <div class="menu_btn">
+        @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn_1" })
+    </div>
+
+}

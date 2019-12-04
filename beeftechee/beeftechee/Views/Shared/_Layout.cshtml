@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title / BeefTechee</title>
+    @Scripts.Render("~/bundles/modernizr")
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="~/Content/css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="~/Content/css/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="~/Content/css/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="~/Content/css/flaticon.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="~/Content/css/magnific-popup.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="~/Content/css/slick.css">
+    <link rel="stylesheet" href="~/Content/css/gijgo.min.css">
+    <link rel="stylesheet" href="~/Content/css/nice-select.css">
+    <link rel="stylesheet" href="~/Content/css/all.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <!--To fix Flash of Unstyled content-->
+    <script>0</script>
+    @Html.Partial("_Navbar")
+
+    @RenderBody()
+    @Html.Partial("_Footer")
+
+    <script src="~/Scripts/jquery-1.12.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    <!-- popper js -->
+    <script src="~/Scripts/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="~/Scripts/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="~/Scripts/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="~/Scripts/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+    <!-- swiper js -->
+    <script src="~/Scripts/slick.min.js"></script>
+    <script src="~/Scripts/gijgo.min.js"></script>
+    <script src="~/Scripts/jquery.nice-select.min.js"></script>
+    <!-- custom js -->
+    <script src="~/Scripts/custom.js"></script>
+    <script src="~/Scripts/globalize.js"></script>
+    <script src="~/Scripts/globalize/currency.js"></script>
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/jQueryFixes.js"></script>
+    <script>
+
+        $(window).ready(function () {
+            // Animate loader off screen
+            $(".se-pre-con").delay(1600).fadeOut("slow");
+        });
+    </script>
+
+</body>
+</html>

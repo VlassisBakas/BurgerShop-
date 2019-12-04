@@ -1,0 +1,96 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <!-- Content Row -->
+    <div class="row">
+
+
+
+        <!-- Revvenues (Annual) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Revenues (Annual)</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">€ <span id="RevenuesAnnual"></span></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-euro-sign fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Burgers Sold Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Burgers Sold</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><span id="BurgersSold"></span></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-utensils fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Drinks Sold Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Drinks Sold</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><span id="DrinksSold"></span></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-glass-whiskey fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Completed Orders Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Completed Orders</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><span id="CompletedOrders"></span></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-cash-register fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Card Body -->
+
+    <canvas id="myChart"></canvas>
+
+    <h2>Order's Map</h2>
+    <div id="map" style="width: 100%; height: 800px;"></div>
+
+
+</div>
+
+@section scripts{
+    <script src="~/Content/admin-panel/vendor/chart.js/Chart.min.js"></script>
+    <script src="~/Scripts/AdminDataChart.js"></script>
+
+}

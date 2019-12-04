@@ -1,0 +1,152 @@
+﻿body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Responsive login button and register button*/
+@media only screen and (min-width: 992px) and (max-width: 1920px) {
+    #navbarSupportedContent a#registerLink.nav-link {
+        padding-left: 100px;
+    }
+}
+
+/*@media only screen and (min-width: 992px) and (max-width: 1920px) {
+    #imageDiv {
+        padding-left: 100px;
+    }
+}*/
+
+@media only screen and (min-width: 992px) and (max-width: 1920px) {
+    #navbarSupportedContent a#usernameLink.nav-link {
+        display: inline-block;
+    }
+}
+
+
+/*Custom class to add margin to elements*/
+.myMarginTop {
+    margin-top: 126px;
+}
+
+
+/*PayPal button*/
+.paypalButton {
+    padding: 7px;
+    border: 2px solid #002F86;
+    border-radius: 27px;
+}
+
+    .paypalButton:hover {
+        padding: 7px;
+        border: 2px solid #FF6426;
+        border-radius: 27px;
+    }
+
+
+#myUserImage {
+    width: 50px;
+    height: 50px;
+    padding-left: 0px;
+    margin-left: 15px;
+    display: inline-block;
+}
+
+.fab.fa-twitter.fa-2x {
+    color: #999999;
+}
+
+    .fab.fa-twitter.fa-2x:hover {
+        color: #FF6426;
+    }
+
+.fab.fa-google.fa-2x {
+    color: #999999;
+}
+
+    .fab.fa-google.fa-2x:hover {
+        color: #FF6426;
+    }
+
+.fab.fa-facebook-square.fa-2x {
+    color: #999999;
+}
+
+    .fab.fa-facebook-square.fa-2x:hover {
+        color: #FF6426;
+    }
+
+
+
+
+
+
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader {
+    display: none;
+}
+
+.js #loader {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('img/burger.gif') center no-repeat #fff;
+}
+
+
+
+#cartSpan {
+    border: 1px solid #FF6426;
+    border-radius: 50%;
+    background-color: #FF6426;
+    color: white;
+    position: relative;
+    left: -11px;
+    top: -18px;
+}
+
+.fas.fa-shopping-cart.fa-lg {
+    color: #b7b7bc;
+}
+
+.fas.fa-shopping-cart.fa-lg:hover {
+    color: #FF6426
+}
+
+
+
+
+
